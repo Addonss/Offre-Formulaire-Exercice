@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex7</title>
+</head>
+<body>
+
+Resultat:<span id="Sous1"></span><br>
+
+<script type="text/javascript">
+	
+	function Divise(){
+	var par = 16;
+	var par2 = 6;
+	var equation = par - par2;
+	result = eval(equation);
+		document.getElementById('Sous1').innerHTML = result;
+
+	}	
+	window.onload = Divise
+
+</script>
+</body>
+</html>

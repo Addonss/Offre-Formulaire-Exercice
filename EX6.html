@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex6</title>
+</head>
+<body>
+
+<div id="Calcul">
+Resultat:<span id="Divise"></span>
+</div>
+<script type="text/javascript">
+	
+	function Divise(){
+	var par = 16;
+	var equation = par / 2;
+	result = eval(equation);
+		document.getElementById('Divise').innerHTML = result;
+
+	}	
+	window.onload = Divise
+
+</script>
+</body>
+</html>

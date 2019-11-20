@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex10</title>
+</head>
+<body>
+
+<input type="text" id='mot'>
+<button onclick="iterateWords()">Add to sentence</button>
+<button onclick="resetWords()">Reset sentence</button>
+<br>Sentence result : <b><span id="ex10_result"></span></b><br>
+
+<script type="text/javascript">
+	var phr = "";
+	
+	function iterateWords(){	
+	var word = document.getElementById('mot').value;
+	document.getElementById('ex10_result').innerHTML = phr;
+	phr = phr + word
+	}
+	
+	function resetWords(){
+	var phr = ""
+	var word = document.getElementById('mot').value;
+	document.getElementById('ex10_result').innerHTML = phr;
+	}
+</script>
+</body>
+</html>

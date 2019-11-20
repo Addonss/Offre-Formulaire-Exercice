@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex9</title>
+</head>
+<body>
+
+<input type="number" id='Kg'><br>
+<input type="number" id='Pounds'>
+<br>
+
+<button onclick="Calcul()">
+	Calcul
+</button><br>
+Kg en Pounds=<span id="KgP"></span><br>
+Pounds en Kg=<span id="PKg"></span>
+<script type="text/javascript">
+	
+	function Calcul(){
+	var num1 = document.getElementById('Kg').value;
+	var num2 = document.getElementById('Pounds').value;
+	var equation = num1 * 2.20462;
+	var equation2 = num2 / 2.20462;
+	result = eval(equation);
+	result2 = eval(equation2);
+		document.getElementById('KgP').innerHTML = result;
+		document.getElementById('PKg').innerHTML = result2;
+	}
+	window.onload = Calcul
+</script>
+</body>
+</html>

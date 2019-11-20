@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex11</title>
+</head>
+<body>
+
+<input type="number" id='montant'>
+<button onclick="Aleatoire()">Cote</button>
+<button onclick="calBenef()">Benefice</button>
+
+<br>Cote : <b><span id="NbAleatoire"></span></b><br>
+Benefice : <b><span id="NbBenef"></span></b><br>
+
+<script type="text/javascript">
+
+	var nombreRandom = Math.floor(Math.random() * (20 - 0.5) + 0.5);
+	document.getElementById('NbAleatoire').innerHTML = nombreRandom;
+
+	
+	function calBenef(){	
+	var euro = document.getElementById('montant').value;
+	euro = nombreRandom * euro
+	document.getElementById('NbBenef').innerHTML = euro;
+	euro.toFixed(2);
+	}
+
+</script>
+</body>
+</html>

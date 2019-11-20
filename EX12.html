@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex12</title>
+</head>
+<body>
+
+<input type="number" id='Km'><button onclick="Duree()">Calculerheure</button>
+<br>
+<input type="number" id='Minutes'>
+<button onclick="Parcours()">Calculerkm</button>
+
+<br>Durée : <b><span id="FinDuree"></span></b><br>
+<br>Durée : <b><span id="Reste"></span></b><br>
+<br>Km : <b><span id="Voy"></span></b><br>
+
+<script type="text/javascript">
+
+	function Duree(){
+	var NbKm = document.getElementById('Km').value;
+	var duree = NbKm * 60 / 1000;
+	var Hduree = duree / 60;
+	var Hduree = Math.floor(Hduree);
+	var Mduree = duree % 60;
+	document.getElementById('FinDuree').innerHTML = Hduree + "heure";
+	document.getElementById('Reste').innerHTML = Mduree + "minute";
+	}
+	
+	function Parcours(){
+	var NbMin = document.getElementById('Minutes').value;
+	var h = "Km";
+	voyage = NbMin * 1000 / 60 + h;
+	document.getElementById('Voy').innerHTML = voyage;
+	}
+
+</script>
+</body>
+</html>

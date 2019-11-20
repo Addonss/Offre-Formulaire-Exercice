@@ -1,0 +1,22 @@
+<DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex1</title>
+</head>
+<body>
+<button onclick="Calcul()">
+	Calcul
+</button>
+Resultat:<span id="Calcul"></span>
+<script type="text/javascript">
+	var X = 10;
+	var Y = 5;
+	var result = X * Y;
+	
+	function Calcul(){
+		document.getElementById('Calcul').innerHTML = result;
+	}
+</script>
+</body>
+</html>

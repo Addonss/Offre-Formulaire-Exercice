@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex1.4</title>
+</head>
+<body>
+
+<input type="number" id='X'>
+<input type="number" id='Y'>
+<br>
+
+<button onclick="Calcul()">
+	Calcul
+</button>
+Resultat:<span id="Calcul"></span>
+<script type="text/javascript">
+	
+	function Calcul(){
+	var num1 = document.getElementById('X').value;
+	var num2 = document.getElementById('Y').value;
+	var result = num1 - num2;
+
+		document.getElementById('Calcul').innerHTML = result;
+	}
+	alert('num1');
+</script>
+</body>
+</html>

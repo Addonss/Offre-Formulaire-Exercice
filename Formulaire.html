@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>formulaire</title>
+</head>
+<body>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        #bloc1{
+            transform: translateX(0);
+        }
+        #bloc1.transition1{
+            transform: translateX(-400px);
+            transition-duration: 1s;
+        }
+
+        #bloc2{
+            transform: translateX(2000px);
+        }
+        #bloc2.transition1{
+            transform: translateX(0);
+            transition-duration: 1s;
+        }
+
+        #bloc1.transition2{
+            transform: translateX(0);
+            transition-duration: 1s;
+        }
+
+        #bloc2.transition2{
+            transform: translateX(2000px);
+            transition-duration: 1s;
+        }
+
+    </style>
+    <div id="bloc1">
+        <p>Connexion</p><br>
+        <p>Mot de passe</p>
+        <input type="text" id="mdp" onkeydown="compte()"/>
+        <span id="compteur">0</span><br>
+        <button onclick="validation()">Validez</button><br>
+        <span id="erreur"></span>
+    </div><br>
+    <div id="bloc2"><p>Bienvenue</p>
+    <button onclick="precedent()">precedent</button>
+    </div>
+<script type="text/javascript">
+    function compte()
+    {
+        var mot = document.getElementById('mdp').value;
+        var x = mot.length;
+        document.getElementById('compteur').innerHTML = x+1;
+    }
+    function validation(){
+        var mot = document.getElementById('mdp').value;
+        var x = mot.length;
+    if (x < 6){
+        document.getElementById('erreur').innerHTML = 'Votre mot de passe doit avoir plus de 5 caracteres';
+    }
+    else if (x > 5){
+        document.getElementById('bloc1').classList.add('transition1');
+        document.getElementById('bloc2').classList.add('transition1');
+        
+    }
+    }
+    function precedent(){
+        document.getElementById('bloc1').classList.add('transition2')
+        document.getElementById('bloc2').classList.add('transition2')
+    }
+</script>
+</body>
+</html>

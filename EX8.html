@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex8</title>
+</head>
+<body>
+
+Resultat:<span id="Resultat"></span><br>
+
+<script type="text/javascript">
+	
+	function Divise(){
+	var par = 16;
+	var par2 = 3;
+	var par3 = 4;
+	var equation = par % par2;
+	var equation2 = equation / par3
+	result = eval(equation2);
+		document.getElementById('Resultat').innerHTML = result;
+
+	}	
+	window.onload = Divise
+
+</script>
+</body>
+</html>

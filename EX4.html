@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Ex4</title>
+</head>
+<body>
+
+<button onclick="plusTen()">plus 10</button>
+<button onclick="diviseFive()">/5</button>
+<button onclick="multiplyEight()">x8</button>
+<button onclick="minusTwo()">-2</button>
+<button onclick="combinePlusTenMinusTwo()">+10 & -2</button>
+<button onclick="resetExo4()">Reset</button><br>
+
+Resultat:<span id="Resultat"></span>
+
+<script type="text/javascript">
+
+	var num1 = 0;
+		document.getElementById('Resultat').innerHTML = num1;
+
+	function plusTen(){	
+	num1 = num1 + 10;
+	document.getElementById('Resultat').innerHTML = num1;
+	}
+	
+	function diviseFive(){
+	num1 = num1 / 5;
+	document.getElementById('Resultat').innerHTML = num1;
+	}
+		
+	function multiplyEight(){
+	num1 = num1 * 8;
+	document.getElementById('Resultat').innerHTML = num1;
+	}	
+	
+	function minusTwo(){
+	num1 = num1 - 2;
+	document.getElementById('Resultat').innerHTML = num1;
+	}	
+	
+	function combinePlusTenMinusTwo(){
+	num1 = num1 + 10 - 2;
+	document.getElementById('Resultat').innerHTML = num1;
+	}
+	
+	function resetExo4(){
+	num1 = 0;
+	document.getElementById('Resultat').innerHTML = num1;
+	}
+
+</script>
+</body>
+</html>
